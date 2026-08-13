@@ -135,6 +135,7 @@
 
 /* Docking with protocol stacks */
 
+#define SAL_USING_AT
 /* end of Docking with protocol stacks */
 #define SAL_SOCKETS_NUM 16
 #define RT_USING_NETDEV
@@ -144,6 +145,13 @@
 #define NETDEV_USING_AUTO_DEFAULT
 #define NETDEV_IPV4 1
 #define NETDEV_IPV6 0
+#define RT_USING_AT
+#define AT_USING_CLIENT
+#define AT_CLIENT_NUM_MAX 1
+#define AT_USING_SOCKET
+#define AT_USING_CLI
+#define AT_CMD_MAX_LEN 128
+#define AT_SW_VERSION_NUM 0x10301
 /* end of Network */
 
 /* Utilities */
@@ -182,14 +190,25 @@
 
 /* end of CYW43439 WiFi */
 /* end of Wi-Fi */
+#define PKG_USING_AT_DEVICE
+#define AT_DEVICE_USING_SIM76XX
+#define AT_DEVICE_SIM76XX_INIT_ASYN
+#define AT_DEVICE_SIM76XX_SOCKET
+#define AT_DEVICE_SIM76XX_SAMPLE
+#define SIM76XX_SAMPLE_POWER_PIN 39
+#define SIM76XX_SAMPLE_STATUS_PIN 25
+#define SIM76XX_SAMPLE_CLIENT_NAME "uart1"
+#define SIM76XX_SAMPLE_RECV_BUFF_LEN 1024
+#define PKG_USING_AT_DEVICE_LATEST_VERSION
+#define PKG_AT_DEVICE_VER_NUM 0x99999
 #define PKG_USING_WIZNET
 #define WIZ_USING_W5500
 
 /* WIZnet device configure */
 
 #define WIZ_SPI_DEVICE "w5500"
-#define WIZ_RST_PIN     17      //GET_PIN(B, 1)
-#define WIZ_IRQ_PIN     18      //GET_PIN(B, 2)
+#define WIZ_RST_PIN 17
+#define WIZ_IRQ_PIN 18
 /* end of WIZnet device configure */
 #define WIZ_USING_DHCP
 #define WIZ_USING_PING
