@@ -12,6 +12,7 @@
 #include <rtdevice.h>
 #include <board.h>
 
+#include <ulog.h>
 /* defined the LED0 pin: PC4-36 PA8-8,PC5-37,PA10-10*/
 #define LED0_PIN GET_PIN(B,8)
 
@@ -24,8 +25,9 @@ int main(void)
     {
         rt_pin_write(LED0_PIN, PIN_HIGH);
         rt_thread_mdelay(500);
-//        rt_kprintf("hello world %d, %d\n", GET_PIN(B,1), GET_PIN(B,2));
+        LOG_I("hello world %d, %d\n", GET_PIN(B,1), GET_PIN(B,2));
         rt_pin_write(LED0_PIN, PIN_LOW);
         rt_thread_mdelay(500);
+        LOG_E("hello world %d, %d\n", GET_PIN(B,1), GET_PIN(B,2));
     }
 }
