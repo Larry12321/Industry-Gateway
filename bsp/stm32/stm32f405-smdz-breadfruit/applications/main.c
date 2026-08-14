@@ -25,9 +25,9 @@ int main(void)
     {
         rt_pin_write(LED0_PIN, PIN_HIGH);
         rt_thread_mdelay(500);
-        LOG_I("hello world %d, %d\n", GET_PIN(B,1), GET_PIN(B,2));
+//        LOG_I("hello world %d, %d\n", GET_PIN(B,1), GET_PIN(B,2));
         rt_pin_write(LED0_PIN, PIN_LOW);
         rt_thread_mdelay(500);
-        LOG_E("hello world %d, %d\n", GET_PIN(B,1), GET_PIN(B,2));
+//        LOG_E("hello world %d, %d\n", GET_PIN(B,1), GET_PIN(B,2));
     }
 }

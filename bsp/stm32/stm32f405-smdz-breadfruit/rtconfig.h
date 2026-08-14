@@ -232,6 +232,9 @@
 /* IoT Cloud */
 
 /* end of IoT Cloud */
+#define PKG_USING_AGILE_MODBUS
+#define PKG_USING_AGILE_MODBUS_V112
+#define PKG_AGILE_MODBUS_VER_NUM 0x10102
 /* end of IoT - internet of things */
 
 /* security packages */
