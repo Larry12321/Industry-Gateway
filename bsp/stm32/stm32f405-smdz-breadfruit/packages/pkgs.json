@@ -1,0 +1,27 @@
+[
+ {
+  "name": "KAWAII_MQTT",
+  "path": "/packages/iot/kawaii-mqtt",
+  "ver": "latest"
+ },
+ {
+  "name": "AT_DEVICE",
+  "path": "/packages/iot/at_device",
+  "ver": "latest"
+ },
+ {
+  "name": "WIZNET",
+  "path": "/packages/iot/wiznet",
+  "ver": "latest"
+ },
+ {
+  "name": "AGILE_MODBUS",
+  "path": "/packages/iot/agile_modbus",
+  "ver": "v1.1.2"
+ },
+ {
+  "name": "CJSON",
+  "path": "/packages/language/JSON/cJSON",
+  "ver": "v1.7.17"
+ }
+]
