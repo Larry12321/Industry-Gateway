@@ -337,9 +337,9 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>__RTTHREAD__, RT_USING_ARMLIBC, RT_USING_LIBC, USE_HAL_DRIVER, __CLK_TCK=RT_TICK_PER_SECOND, __STDC_LIMIT_MACROS, STM32F405xx</Define>
+              <Define>__RTTHREAD__, RT_USING_ARMLIBC, __CLK_TCK=RT_TICK_PER_SECOND, RT_USING_LIBC, USE_HAL_DRIVER, STM32F405xx, __STDC_LIMIT_MACROS</Define>
               <Undefine></Undefine>
-              <IncludePath>applications;board;packages\at_device-latest\class\sim76xx;..\..\..\libcpu\arm\common;..\libraries\HAL_Drivers\config;packages\at_device-latest\inc;..\..\..\components\drivers\include;..\..\..\components\libc\compilers\common\extension;packages\wiznet-latest\ioLibrary\Ethernet;..\..\..\components\net\at\include;..\..\..\components\net\sal\include;..\..\..\components\drivers\include;..\..\..\components\libc\compilers\common\include;..\..\..\components\utilities\ulog;..\..\..\components\net\sal\impl;..\..\..\components\drivers\include;packages\wiznet-latest\inc;..\..\..\components\libc\posix\io\epoll;..\..\..\components\drivers\include;packages\agile_modbus-v1.1.2\inc;packages\wiznet-latest\ioLibrary\Internet;..\..\..\components\drivers\include;..\..\..\components\libc\posix\io\poll;..\..\..\libcpu\arm\cortex-m4;..\..\..\components\drivers\spi;..\..\..\components\net\sal\include\socket\sys_socket;..\..\..\components\drivers\include;..\libraries\STM32F4xx_HAL\CMSIS\Device\ST\STM32F4xx\Include;board\CubeMX_Config\Inc;..\..\..\components\finsh;..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Inc;..\..\..\components\drivers\include;..\..\..\components\libc\posix\ipc;packages\wiznet-latest\ioLibrary;..\..\..\components\libc\compilers\common\extension\fcntl\octal;.;..\..\..\components\net\netdev\include;packages\agile_modbus-v1.1.2\util;..\libraries\HAL_Drivers;..\..\..\include;..\..\..\components\libc\posix\io\eventfd;..\..\..\components\net\at\at_socket;..\libraries\HAL_Drivers\CMSIS\Include;..\..\..\components\net\sal\include\socket</IncludePath>
+              <IncludePath>..\..\..\components\drivers\include;packages\kawaii-mqtt-latest\common;packages\wiznet-latest\ioLibrary\Ethernet;..\..\..\libcpu\arm\common;.;..\..\..\components\net\sal\include;board;..\..\..\libcpu\arm\cortex-m4;packages\agile_modbus-v1.1.2\inc;..\..\..\components\drivers\include;..\libraries\HAL_Drivers\config;packages\wiznet-latest\ioLibrary\Internet;..\..\..\components\libc\compilers\common\extension;..\..\..\components\drivers\include;..\..\..\components\net\netdev\include;..\..\..\components\finsh;..\libraries\STM32F4xx_HAL\CMSIS\Device\ST\STM32F4xx\Include;..\..\..\components\drivers\include;..\..\..\components\net\sal\include\socket;..\..\..\components\drivers\spi;packages\kawaii-mqtt-latest\platform\RT-Thread;..\..\..\components\net\at\include;..\..\..\include;..\..\..\components\net\sal\include\socket\sys_socket;packages\at_device-latest\class\sim76xx;packages\kawaii-mqtt-latest\network;..\..\..\components\drivers\include;packages\wiznet-latest\inc;packages\wiznet-latest\ioLibrary;applications;packages\kawaii-mqtt-latest\mqtt;..\libraries\HAL_Drivers;..\..\..\components\libc\compilers\common\extension\fcntl\octal;..\..\..\components\libc\compilers\common\include;packages\kawaii-mqtt-latest\common\log;..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Inc;..\..\..\components\drivers\include;packages\kawaii-mqtt-latest\mqttclient;packages\cJSON-v1.7.17;..\..\..\components\utilities\ulog;board\CubeMX_Config\Inc;packages\agile_modbus-v1.1.2\util;..\..\..\components\net\sal\impl;..\..\..\components\drivers\include;..\..\..\components\libc\posix\io\eventfd;..\..\..\components\net\at\at_socket;..\..\..\components\libc\posix\io\epoll;..\..\..\components\libc\posix\io\poll;..\libraries\HAL_Drivers\CMSIS\Include;packages\at_device-latest\inc;..\..\..\components\libc\posix\ipc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -389,11 +389,6 @@
               <FilePath>packages\agile_modbus-v1.1.2\src\agile_modbus_tcp.c</FilePath>
             </File>
             <File>
-              <FileName>agile_modbus_rtu.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\agile_modbus-v1.1.2\src\agile_modbus_rtu.c</FilePath>
-            </File>
-            <File>
               <FileName>agile_modbus_slave_util.c</FileName>
               <FileType>1</FileType>
               <FilePath>packages\agile_modbus-v1.1.2\util\agile_modbus_slave_util.c</FilePath>
@@ -403,16 +398,16 @@
               <FileType>1</FileType>
               <FilePath>packages\agile_modbus-v1.1.2\src\agile_modbus.c</FilePath>
             </File>
+            <File>
+              <FileName>agile_modbus_rtu.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\agile_modbus-v1.1.2\src\agile_modbus_rtu.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
           <GroupName>Applications</GroupName>
           <Files>
-            <File>
-              <FileName>init.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>applications\init.c</FilePath>
-            </File>
             <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
@@ -421,13 +416,28 @@
             <File>
               <FileName>modbus_rtu_master.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\applications\modbus_rtu_master.c</FilePath>
+              <FilePath>applications\modbus_rtu_master.c</FilePath>
+            </File>
+            <File>
+              <FileName>init.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>applications\init.c</FilePath>
             </File>
           </Files>
         </Group>
         <Group>
           <GroupName>AT</GroupName>
           <Files>
+            <File>
+              <FileName>at_socket.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\components\net\at\at_socket\at_socket.c</FilePath>
+            </File>
+            <File>
+              <FileName>at_cli.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\components\net\at\src\at_cli.c</FilePath>
+            </File>
             <File>
               <FileName>at_client.c</FileName>
               <FileType>1</FileType>
@@ -437,16 +447,6 @@
               <FileName>at_utils.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\components\net\at\src\at_utils.c</FilePath>
-            </File>
-            <File>
-              <FileName>at_cli.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\components\net\at\src\at_cli.c</FilePath>
-            </File>
-            <File>
-              <FileName>at_socket.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\components\net\at\at_socket\at_socket.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -472,6 +472,21 @@
               <FileName>at_sample_sim76xx.c</FileName>
               <FileType>1</FileType>
               <FilePath>packages\at_device-latest\samples\at_sample_sim76xx.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>cJSON</GroupName>
+          <Files>
+            <File>
+              <FileName>cJSON_Utils.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\cJSON-v1.7.17\cJSON_Utils.c</FilePath>
+            </File>
+            <File>
+              <FileName>cJSON.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\cJSON-v1.7.17\cJSON.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -679,14 +694,154 @@
               <FilePath>..\..\..\components\finsh\cmd.c</FilePath>
             </File>
             <File>
+              <FileName>msh.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\components\finsh\msh.c</FilePath>
+            </File>
+            <File>
               <FileName>msh_parse.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\components\finsh\msh_parse.c</FilePath>
             </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>kawaii_mqtt</GroupName>
+          <Files>
             <File>
-              <FileName>msh.c</FileName>
+              <FileName>arch.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\components\finsh\msh.c</FilePath>
+              <FilePath>packages\kawaii-mqtt-latest\common\log\arch\rt-thread\arch.c</FilePath>
+            </File>
+            <File>
+              <FileName>MQTTDeserializePublish.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\kawaii-mqtt-latest\mqtt\MQTTDeserializePublish.c</FilePath>
+            </File>
+            <File>
+              <FileName>platform_memory.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\kawaii-mqtt-latest\platform\RT-Thread\platform_memory.c</FilePath>
+            </File>
+            <File>
+              <FileName>random.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\kawaii-mqtt-latest\common\random.c</FilePath>
+            </File>
+            <File>
+              <FileName>MQTTUnsubscribeClient.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\kawaii-mqtt-latest\mqtt\MQTTUnsubscribeClient.c</FilePath>
+            </File>
+            <File>
+              <FileName>mqtt_list.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\kawaii-mqtt-latest\common\mqtt_list.c</FilePath>
+            </File>
+            <File>
+              <FileName>MQTTSerializePublish.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\kawaii-mqtt-latest\mqtt\MQTTSerializePublish.c</FilePath>
+            </File>
+            <File>
+              <FileName>MQTTSubscribeClient.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\kawaii-mqtt-latest\mqtt\MQTTSubscribeClient.c</FilePath>
+            </File>
+            <File>
+              <FileName>test_ca.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\kawaii-mqtt-latest\test\test_ca.c</FilePath>
+            </File>
+            <File>
+              <FileName>fifo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\kawaii-mqtt-latest\common\log\fifo.c</FilePath>
+            </File>
+            <File>
+              <FileName>MQTTConnectServer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\kawaii-mqtt-latest\mqtt\MQTTConnectServer.c</FilePath>
+            </File>
+            <File>
+              <FileName>platform_thread.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\kawaii-mqtt-latest\platform\RT-Thread\platform_thread.c</FilePath>
+            </File>
+            <File>
+              <FileName>platform_mutex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\kawaii-mqtt-latest\platform\RT-Thread\platform_mutex.c</FilePath>
+            </File>
+            <File>
+              <FileName>MQTTUnsubscribeServer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\kawaii-mqtt-latest\mqtt\MQTTUnsubscribeServer.c</FilePath>
+            </File>
+            <File>
+              <FileName>nettype_tls.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\kawaii-mqtt-latest\network\nettype_tls.c</FilePath>
+            </File>
+            <File>
+              <FileName>MQTTPacket.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\kawaii-mqtt-latest\mqtt\MQTTPacket.c</FilePath>
+            </File>
+            <File>
+              <FileName>format.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\kawaii-mqtt-latest\common\log\format.c</FilePath>
+            </File>
+            <File>
+              <FileName>MQTTFormat.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\kawaii-mqtt-latest\mqtt\MQTTFormat.c</FilePath>
+            </File>
+            <File>
+              <FileName>test.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\kawaii-mqtt-latest\test\test.c</FilePath>
+            </File>
+            <File>
+              <FileName>nettype_tcp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\kawaii-mqtt-latest\network\nettype_tcp.c</FilePath>
+            </File>
+            <File>
+              <FileName>MQTTSubscribeServer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\kawaii-mqtt-latest\mqtt\MQTTSubscribeServer.c</FilePath>
+            </File>
+            <File>
+              <FileName>platform_timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\kawaii-mqtt-latest\platform\RT-Thread\platform_timer.c</FilePath>
+            </File>
+            <File>
+              <FileName>network.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\kawaii-mqtt-latest\network\network.c</FilePath>
+            </File>
+            <File>
+              <FileName>mqttclient.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\kawaii-mqtt-latest\mqttclient\mqttclient.c</FilePath>
+            </File>
+            <File>
+              <FileName>MQTTConnectClient.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\kawaii-mqtt-latest\mqtt\MQTTConnectClient.c</FilePath>
+            </File>
+            <File>
+              <FileName>platform_net_socket.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\kawaii-mqtt-latest\platform\RT-Thread\platform_net_socket.c</FilePath>
+            </File>
+            <File>
+              <FileName>salof.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\kawaii-mqtt-latest\common\log\salof.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -759,94 +914,9 @@
           <GroupName>Libraries</GroupName>
           <Files>
             <File>
-              <FileName>stm32f4xx_hal_rtc_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rtc_ex.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_rcc_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_crc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_crc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_dma_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_gpio.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_rtc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rtc.c</FilePath>
-            </File>
-            <File>
               <FileName>stm32f4xx_hal_cryp.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cryp.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_uart.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_rcc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_pwr_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_cortex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_cryp_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cryp_ex.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_wwdg.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_wwdg.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_spi.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_spi.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_dma.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c</FilePath>
-            </File>
-            <File>
-              <FileName>system_stm32f4xx.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\libraries\STM32F4xx_HAL\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_cec.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cec.c</FilePath>
             </File>
             <File>
               <FileName>stm32f4xx_hal_qspi.c</FileName>
@@ -854,9 +924,19 @@
               <FilePath>..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_qspi.c</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_hal_pwr.c</FileName>
+              <FileName>stm32f4xx_hal_gpio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.c</FilePath>
+              <FilePath>..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_hal.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_hal_cryp_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cryp_ex.c</FilePath>
             </File>
             <File>
               <FileName>stm32f4xx_hal_usart.c</FileName>
@@ -864,14 +944,89 @@
               <FilePath>..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_usart.c</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_hal_rng.c</FileName>
+              <FileName>stm32f4xx_hal_rtc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rng.c</FilePath>
+              <FilePath>..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rtc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_hal_spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_spi.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_hal_uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_hal_rcc_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_hal_rtc_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rtc_ex.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_hal_wwdg.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_wwdg.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_hal_cec.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cec.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_hal_pwr_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_hal_rcc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c</FilePath>
             </File>
             <File>
               <FileName>stm32f4xx_hal_iwdg.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_iwdg.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_hal_dma.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_hal_cortex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c</FilePath>
+            </File>
+            <File>
+              <FileName>system_stm32f4xx.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\libraries\STM32F4xx_HAL\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_hal_crc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_crc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_hal_rng.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rng.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_hal_pwr.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_hal_dma_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -909,14 +1064,14 @@
           <GroupName>Utilities</GroupName>
           <Files>
             <File>
-              <FileName>console_be.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\components\utilities\ulog\backend\console_be.c</FilePath>
-            </File>
-            <File>
               <FileName>ulog.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\components\utilities\ulog\ulog.c</FilePath>
+            </File>
+            <File>
+              <FileName>console_be.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\components\utilities\ulog\backend\console_be.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -929,29 +1084,9 @@
               <FilePath>packages\wiznet-latest\src\wiz.c</FilePath>
             </File>
             <File>
-              <FileName>wizchip_dns.c</FileName>
+              <FileName>wiz_socket.c</FileName>
               <FileType>1</FileType>
-              <FilePath>packages\wiznet-latest\ioLibrary\Internet\DNS\wizchip_dns.c</FilePath>
-            </File>
-            <File>
-              <FileName>wiz_ping.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\wiznet-latest\src\wiz_ping.c</FilePath>
-            </File>
-            <File>
-              <FileName>wizchip_socket.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\wiznet-latest\ioLibrary\Ethernet\wizchip_socket.c</FilePath>
-            </File>
-            <File>
-              <FileName>wiz_af_inet.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\wiznet-latest\src\wiz_af_inet.c</FilePath>
-            </File>
-            <File>
-              <FileName>w5500.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\wiznet-latest\ioLibrary\Ethernet\W5500\w5500.c</FilePath>
+              <FilePath>packages\wiznet-latest\src\wiz_socket.c</FilePath>
             </File>
             <File>
               <FileName>wizchip_dhcp.c</FileName>
@@ -959,9 +1094,14 @@
               <FilePath>packages\wiznet-latest\ioLibrary\Internet\DHCP\wizchip_dhcp.c</FilePath>
             </File>
             <File>
-              <FileName>wiz_socket.c</FileName>
+              <FileName>wizchip_conf.c</FileName>
               <FileType>1</FileType>
-              <FilePath>packages\wiznet-latest\src\wiz_socket.c</FilePath>
+              <FilePath>packages\wiznet-latest\ioLibrary\Ethernet\wizchip_conf.c</FilePath>
+            </File>
+            <File>
+              <FileName>w5500.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\wiznet-latest\ioLibrary\Ethernet\W5500\w5500.c</FilePath>
             </File>
             <File>
               <FileName>wiz_device.c</FileName>
@@ -969,9 +1109,24 @@
               <FilePath>packages\wiznet-latest\src\wiz_device.c</FilePath>
             </File>
             <File>
-              <FileName>wizchip_conf.c</FileName>
+              <FileName>wizchip_socket.c</FileName>
               <FileType>1</FileType>
-              <FilePath>packages\wiznet-latest\ioLibrary\Ethernet\wizchip_conf.c</FilePath>
+              <FilePath>packages\wiznet-latest\ioLibrary\Ethernet\wizchip_socket.c</FilePath>
+            </File>
+            <File>
+              <FileName>wiz_ping.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\wiznet-latest\src\wiz_ping.c</FilePath>
+            </File>
+            <File>
+              <FileName>wizchip_dns.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\wiznet-latest\ioLibrary\Internet\DNS\wizchip_dns.c</FilePath>
+            </File>
+            <File>
+              <FileName>wiz_af_inet.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\wiznet-latest\src\wiz_af_inet.c</FilePath>
             </File>
           </Files>
         </Group>

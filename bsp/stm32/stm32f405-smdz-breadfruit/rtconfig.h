@@ -182,6 +182,39 @@
 
 /* IoT - internet of things */
 
+#define PKG_USING_KAWAII_MQTT
+#define KAWAII_MQTT_NETSOCKET_USE_SAL
+#define KAWAII_MQTT_LOG_IS_SALOF
+#define SALOF_USING_LOG
+#define SALOF_USING_SALOF
+#define SALOF_BUFF_SIZE 512
+#define SALOF_FIFO_SIZE 2048
+#define SALOF_TASK_STACK_SIZE 2048
+#define SALOF_TASK_TICK 50
+#define SALOF_LOG_LEVEL 4
+#define KAWAII_MQTT_LOG_LEVEL 4
+#define KAWAII_MQTT_VERSION 4
+#define KAWAII_MQTT_KEEP_ALIVE_INTERVAL 100
+#define KAWAII_MQTT_THREAD_STACK_SIZE 4096
+#define KAWAII_MQTT_THREAD_PRIO 15
+#define KAWAII_MQTT_THREAD_TICK 50
+#define KAWAII_MQTT_MAX_PACKET_ID 0xFFFE
+#define KAWAII_MQTT_TOPIC_LEN_MAX 64
+#define KAWAII_MQTT_ACK_HANDLER_NUM_MAX 64
+#define KAWAII_MQTT_DEFAULT_BUF_SIZE 1024
+#define KAWAII_MQTT_DEFAULT_CMD_TIMEOUT 4000
+#define KAWAII_MQTT_MAX_CMD_TIMEOUT 20000
+#define KAWAII_MQTT_MIN_CMD_TIMEOUT 1000
+#define KAWAII_MQTT_RECONNECT_DEFAULT_DURATION 1000
+#define PKG_USING_KAWAII_MQTT_TEST
+#define KAWAII_MQTT_HOST "jiejie01.top"
+#define KAWAII_MQTT_PORT "1883"
+#define KAWAII_MQTT_CLIENTID "rtthread001"
+#define KAWAII_MQTT_USERNAME "rt-thread"
+#define KAWAII_MQTT_PASSWORD "rt-thread"
+#define KAWAII_MQTT_SUBTOPIC "rtt-sub"
+#define KAWAII_MQTT_PUBTOPIC "rtt-pub"
+#define PKG_USING_KAWAII_MQTT_LATEST_VERSION
 
 /* Wi-Fi */
 
@@ -245,6 +278,8 @@
 
 /* JSON: JavaScript Object Notation, a lightweight data-interchange format */
 
+#define PKG_USING_CJSON
+#define PKG_USING_CJSON_V1717
 /* end of JSON: JavaScript Object Notation, a lightweight data-interchange format */
 
 /* XML: Extensible Markup Language */
